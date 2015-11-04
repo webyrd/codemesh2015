@@ -16,7 +16,8 @@
    ;  ()
      ((fresh (x t)
         (== `(lambda (,x) ,t) term)))
-   ;  ()
+     ((fresh (e1 e2)
+        (== `(,e1 ,e2) term)))
      )))
 
 (lc-syn `(lambda (z) z))
