@@ -6,4 +6,4 @@
 
 ;;; http://tca.github.io/veneer/editor.html
 
-(== x 5)
+(== x y)
