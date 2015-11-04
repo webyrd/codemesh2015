@@ -6,4 +6,6 @@
 
 ;;; http://tca.github.io/veneer/editor.html
 
-(== x y)
+(fresh (y)
+  (== 5 x)
+  (== 6 x))
