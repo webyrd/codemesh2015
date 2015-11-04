@@ -15,9 +15,13 @@
     (conde
      ((symbolo term))
      ((fresh (x t)
-        (== `(lambda (,x) ,t) term)))
+        (== `(lambda (,x) ,t) term)
+        (symbolo x)
+        (lc-syn t)))
      ((fresh (e1 e2)
-        (== `(,e1 ,e2) term)))
+        (== `(,e1 ,e2) term)
+        (lc-syn e1)
+        (lc-syn e2)))
      )))
 
 (lc-syn `(lambda (z) (z z)))
