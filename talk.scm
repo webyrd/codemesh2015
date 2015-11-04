@@ -7,5 +7,6 @@
 ;;; http://tca.github.io/veneer/editor.html
 
 (fresh (y)
-  (== 5 x)
-  (== 6 x))
+  (conde
+   ((== 5 x))
+   ((== 6 x))))
