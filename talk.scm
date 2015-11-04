@@ -6,7 +6,17 @@
 
 ;;; http://tca.github.io/veneer/editor.html
 
-(fresh (y)
-  (conde
-   ((== 5 x))
-   ((== 6 x)))) 
+; x  <- variable
+; (lambda (x) y) <- abs
+; (f g) <- application
+
+(define lc-syn
+  (lambda (term)
+    (conde
+   ;  ()
+     ((fresh (x t)
+        (== `(lambda (,x) ,t) term)))
+   ;  ()
+     )))
+
+(lc-syn `(lambda (z) z))
